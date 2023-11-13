@@ -33,7 +33,32 @@ int main() {
         mystrcpy(str1, str2);
         cout << "Copied string: " << str1 << endl;
         break;
-  
+    case 3:
+        mystrcat(str1, str2);
+        cout << "Concatenated string: " << str1 << endl;
+        break;
+    case 4:
+        char s;
+        cout << "Enter the character to search: ";
+        cin >> s;
+        if (mystrchr(str1, s) != nullptr) {
+            cout << "Character found at position: " << mystrchr(str1, s) - str1 << endl;
+        }
+        else {
+            cout << "Character not found." << endl;
+        }
+        break;
+    case 5:
+        if (mystrstr(str1, str2) != nullptr) {
+            cout << "Substring found at position: " << mystrstr(str1, str2) - str1 << endl;
+        }
+        else {
+            cout << "Substring not found." << endl;
+        }
+        break;
+    default:
+        cout << "Invalid choice. Please enter a number between 1 and 5." << endl;
+        break;
     }
 
     return 0;
