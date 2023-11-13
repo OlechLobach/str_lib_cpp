@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    const int bufferSize = 100;
+    const int bufferSize = 100; 
 
     char str1[bufferSize];
     char str2[bufferSize];
@@ -29,7 +29,12 @@ int main() {
     case 1:
         cout << "Length of the first string: " << mystrlen(str1) << endl;
         break;
-
-        return 0;
+    case 2:
+        mystrcpy(str1, str2);
+        cout << "Copied string: " << str1 << endl;
+        break;
+  
     }
+
+    return 0;
 }
