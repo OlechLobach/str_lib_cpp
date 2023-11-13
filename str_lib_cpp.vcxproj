@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="core\library\str_lib.cpp" />
+    <ClCompile Include="main\lib.cpp" />
     <ClCompile Include="main\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="core\library\str_lib.h" />
+    <ClInclude Include="main\lib.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

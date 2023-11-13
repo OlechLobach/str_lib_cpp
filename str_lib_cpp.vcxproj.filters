@@ -4,24 +4,18 @@
     <Filter Include="main">
       <UniqueIdentifier>{3526037d-2c20-467f-8dd1-b70039b7d828}</UniqueIdentifier>
     </Filter>
-    <Filter Include="core">
-      <UniqueIdentifier>{89fa1c86-f633-4d86-aef2-5e6edbb2faf1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\library">
-      <UniqueIdentifier>{fbabc4b7-22ba-4c2a-958f-81c067bda164}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
       <Filter>main</Filter>
     </ClCompile>
-    <ClCompile Include="core\library\str_lib.cpp">
-      <Filter>core\library</Filter>
+    <ClCompile Include="main\lib.cpp">
+      <Filter>main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="core\library\str_lib.h">
-      <Filter>core\library</Filter>
+    <ClInclude Include="main\lib.h">
+      <Filter>main</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
