@@ -1,10 +1,7 @@
-
-#include "lib.h"
-
-using namespace std;
+#include"lib.h"
 
 int main() {
-    const int bufferSize = 1000; 
+    const int bufferSize = 100;
 
     char str1[bufferSize];
     char str2[bufferSize];
@@ -22,7 +19,13 @@ int main() {
     cout << "3. Concatenate two strings\n";
     cout << "4. Search for a character in a string\n";
     cout << "5. Search for a substring in a string\n";
-    cout << "Enter your choice (1-5): ";
+    cout << "6. Compare two strings\n";
+    cout << "7. Convert string to number\n";
+    cout << "8. Convert number to string\n";
+    cout << "9. Uppercase string\n";
+    cout << "10. Lowercase string\n";
+    cout << "11. Reverse string\n";
+    cout << "Enter your choice (1-11): ";
     cin >> choice;
 
     switch (choice) {
@@ -56,8 +59,26 @@ int main() {
             cout << "Substring not found." << endl;
         }
         break;
+    case 6:
+        cout << "Comparison result: " << mystrcmp(str1, str2) << endl;
+        break;
+    case 7:
+        cout << "String to number: " << StringToNumber(str1) << endl;
+        break;
+    case 8:
+        cout << "Number to string: " << NumberToString(12345) << endl;
+        break;
+    case 9:
+        cout << "Uppercase string: " << Uppercase(str1) << endl;
+        break;
+    case 10:
+        cout << "Lowercase string: " << Lowercase(str1) << endl;
+        break;
+    case 11:
+        cout << "Reversed string: " << mystrrev(str1) << endl;
+        break;
     default:
-        cout << "Invalid choice. Please enter a number between 1 and 5." << endl;
+        cout << "Invalid choice. Please enter a number between 1 and 11." << endl;
         break;
     }
 

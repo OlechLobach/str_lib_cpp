@@ -52,3 +52,59 @@ char* mystrstr(char* str1, char* str2) {
     }
     return nullptr;
 }
+
+int mystrcmp(const char* str1, const char* str2) {
+    while (*str1 && (*str1 == *str2)) {
+        str1++;
+        str2++;
+    }
+    return *(const unsigned char*)str1 - *(const unsigned char*)str2;
+}
+
+int StringToNumber(char* str) {
+    try {
+        return stoi(str);
+    }
+    catch (const invalid_argument&) {
+       
+        return 0; 
+    }
+}
+
+char* NumberToString(int number) {
+    return _strdup(to_string(number).c_str());
+}
+
+char* Uppercase(char* str1) {
+    char* ptr = str1;
+    while (*ptr != '\0') {
+        if (*ptr >= 'a' && *ptr <= 'z') {
+            *ptr -= 32;
+        }
+        ptr++;
+    }
+    return str1;
+}
+
+char* Lowercase(char* str1) {
+    char* ptr = str1;
+    while (*ptr != '\0') {
+        if (*ptr >= 'A' && *ptr <= 'Z') {
+            *ptr += 32;
+        }
+        ptr++;
+    }
+    return str1;
+}
+
+char* mystrrev(char* str) {
+    int length = mystrlen(str);
+    char* reversed = new char[length + 1];
+
+    for (int i = 0; i < length; ++i) {
+        reversed[i] = str[length - 1 - i];
+    }
+    reversed[length] = '\0';
+
+    return reversed;
+}
