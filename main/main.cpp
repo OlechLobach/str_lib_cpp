@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    const int bufferSize = 100; 
+    const int bufferSize = 1000; 
 
     char str1[bufferSize];
     char str2[bufferSize];
